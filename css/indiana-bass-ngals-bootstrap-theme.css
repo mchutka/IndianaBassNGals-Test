@@ -1,0 +1,396 @@
+/*
+  Indiana Bass'N Gals Bootstrap Theme
+  Built as a Bootstrap 5 override stylesheet for a Dreamweaver/GitHub workflow.
+  Notes:
+  - Page structure and homepage copy cues were taken from the current public homepage.
+  - Exact CSS variables are not exposed in the parsed source returned by the page renderer,
+    so color values below are a close visual match rather than a direct extraction.
+*/
+
+:root {
+  --ibng-primary: #e14f86;
+  --ibng-primary-rgb: 225, 79, 134;
+  --ibng-primary-dark: #c63f72;
+  --ibng-primary-soft: #fdebf2;
+  --ibng-accent: #8a2f59;
+  --ibng-ink: #2c2c2c;
+  --ibng-muted: #6a6a6a;
+  --ibng-border: #e8d9df;
+  --ibng-bg: #ffffff;
+  --ibng-bg-soft: #fff8fb;
+  --ibng-shadow: 0 10px 30px rgba(44, 44, 44, 0.08);
+  --bs-primary: var(--ibng-primary);
+  --bs-primary-rgb: var(--ibng-primary-rgb);
+  --bs-link-color: var(--ibng-primary-dark);
+  --bs-link-hover-color: var(--ibng-accent);
+  --bs-body-color: var(--ibng-ink);
+  --bs-body-bg: var(--ibng-bg);
+  --bs-border-color: var(--ibng-border);
+  --bs-font-sans-serif: "Helvetica Neue", Arial, "Segoe UI", sans-serif;
+  --bs-body-font-size: 1rem;
+  --bs-body-line-height: 1.72;
+  --bs-border-radius: 0;
+  --bs-border-radius-sm: 0;
+  --bs-border-radius-lg: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+  color: var(--ibng-ink);
+  background: var(--ibng-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Layout */
+.container-page {
+  max-width: 1180px;
+}
+
+.section-space {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.section-space-sm {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+/* Header / Nav */
+.site-header {
+  background: #fff;
+}
+
+.site-header .top-logo-wrap {
+  text-align: center;
+  padding: 1.4rem 0 0.95rem;
+}
+
+.site-header .top-logo {
+  max-height: 118px;
+  width: auto;
+}
+
+.site-nav {
+  border-top: 1px solid var(--ibng-border);
+  border-bottom: 1px solid var(--ibng-border);
+  background: #fff;
+}
+
+.site-nav .navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.site-nav .navbar-nav {
+  width: 100%;
+  justify-content: center;
+  gap: 0.15rem;
+}
+
+.site-nav .nav-link {
+  color: var(--ibng-ink);
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 0.9rem 0.95rem;
+  border-bottom: 3px solid transparent;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus,
+.site-nav .nav-link.active {
+  color: var(--ibng-primary-dark);
+  border-bottom-color: var(--ibng-primary);
+}
+
+.navbar-toggler {
+  border: 0;
+  box-shadow: none !important;
+}
+
+/* Hero / Welcome block */
+.hero-home {
+  padding: 3.5rem 0 2.25rem;
+}
+
+.hero-home h1,
+.page-title {
+  color: var(--ibng-accent);
+  font-size: clamp(2rem, 3vw, 2.85rem);
+  line-height: 1.15;
+  font-weight: 700;
+  margin-bottom: 1.15rem;
+}
+
+.hero-home .lead,
+.intro-copy {
+  font-size: 1.03rem;
+  color: var(--ibng-ink);
+}
+
+.hero-home p,
+.rich-copy p {
+  margin-bottom: 1rem;
+}
+
+.rich-copy a,
+.intro-copy a {
+  font-weight: 600;
+}
+
+/* Feature panel strip */
+.feature-grid {
+  padding-top: 1rem;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid var(--ibng-border);
+  box-shadow: var(--ibng-shadow);
+  height: 100%;
+  overflow: hidden;
+}
+
+.feature-card .ratio,
+.feature-card .feature-image-wrap {
+  background: var(--ibng-bg-soft);
+}
+
+.feature-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.feature-card .card-body {
+  padding: 1.25rem 1.25rem 1.35rem;
+}
+
+.feature-card .card-title {
+  color: var(--ibng-accent);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+}
+
+.feature-card .card-text {
+  color: var(--ibng-muted);
+  font-size: 0.97rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Text sections */
+.page-band {
+  background: linear-gradient(180deg, var(--ibng-bg-soft) 0%, #fff 100%);
+  border-top: 1px solid var(--ibng-border);
+  border-bottom: 1px solid var(--ibng-border);
+}
+
+.section-title {
+  color: var(--ibng-accent);
+  font-size: clamp(1.6rem, 2vw, 2.1rem);
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.section-kicker {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ibng-primary-dark);
+  margin-bottom: 0.8rem;
+  display: inline-block;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 0;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.72rem 1.1rem;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--ibng-primary);
+  --bs-btn-border-color: var(--ibng-primary);
+  --bs-btn-hover-bg: var(--ibng-primary-dark);
+  --bs-btn-hover-border-color: var(--ibng-primary-dark);
+  --bs-btn-active-bg: var(--ibng-primary-dark);
+  --bs-btn-active-border-color: var(--ibng-primary-dark);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--ibng-primary-dark);
+  --bs-btn-border-color: var(--ibng-primary);
+  --bs-btn-hover-bg: var(--ibng-primary);
+  --bs-btn-hover-border-color: var(--ibng-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: var(--ibng-primary-dark);
+  --bs-btn-active-border-color: var(--ibng-primary-dark);
+}
+
+/* Cards / utility surfaces */
+.card {
+  border-radius: 0;
+  border-color: var(--ibng-border);
+}
+
+.card-header,
+.card-footer {
+  background: var(--ibng-bg-soft);
+  border-color: var(--ibng-border);
+}
+
+.surface-soft {
+  background: var(--ibng-bg-soft);
+  border: 1px solid var(--ibng-border);
+  padding: 1.5rem;
+}
+
+/* Tables / schedule blocks */
+.table {
+  --bs-table-striped-bg: rgba(var(--ibng-primary-rgb), 0.045);
+}
+
+.table thead th {
+  color: var(--ibng-accent);
+  border-bottom-width: 1px;
+  font-weight: 700;
+}
+
+/* Forms */
+.form-control,
+.form-select {
+  border-radius: 0;
+  border-color: #d7c5cd;
+  padding: 0.75rem 0.9rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: rgba(var(--ibng-primary-rgb), 0.55);
+  box-shadow: 0 0 0 0.2rem rgba(var(--ibng-primary-rgb), 0.12);
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 3rem;
+  padding: 2rem 0 2.5rem;
+  border-top: 1px solid var(--ibng-border);
+  background: #fff;
+  color: var(--ibng-muted);
+  font-size: 0.95rem;
+}
+
+.site-footer a {
+  color: var(--ibng-primary-dark);
+}
+
+/* Image treatments */
+.img-framed {
+  border: 1px solid var(--ibng-border);
+  box-shadow: var(--ibng-shadow);
+  background: #fff;
+}
+
+.img-soft {
+  background: var(--ibng-bg-soft);
+}
+
+/* Jotform embed wrapper */
+.contact-embed {
+  background: #fff;
+  border: 1px solid var(--ibng-border);
+  box-shadow: var(--ibng-shadow);
+  padding: 0.75rem;
+}
+
+.contact-embed iframe {
+  width: 1px;
+  min-width: 100%;
+  border: 0;
+  min-height: 880px;
+}
+
+/* Bootstrap helpers tuned for homepage sections */
+.home-copy-block {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-feature-title {
+  font-size: 1.4rem;
+  color: var(--ibng-accent);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.home-feature-link {
+  font-weight: 700;
+  color: var(--ibng-primary-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .site-header .top-logo {
+    max-height: 94px;
+  }
+
+  .site-nav .navbar-nav {
+    align-items: flex-start;
+    gap: 0;
+    padding: 0.5rem 0;
+  }
+
+  .site-nav .nav-link {
+    width: 100%;
+    padding: 0.72rem 0.25rem;
+    border-bottom: 0;
+  }
+
+  .hero-home {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-space {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-home h1,
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .feature-card .card-body {
+    padding: 1rem;
+  }
+
+  .contact-embed iframe {
+    min-height: 980px;
+  }
+}
